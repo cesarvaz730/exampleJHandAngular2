@@ -1,0 +1,16 @@
+version: '2'
+services:
+    aniviptest-mongodb:
+        image: mongo:3.2.10
+        ports:
+            - "27017:27017"
+        command: mongos --configdb aniviptest-mongodb-config
+    aniviptest-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    aniviptest-mongodb-config:
+        image: mongo:3.2.10
+        container_name: aniviptest-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db

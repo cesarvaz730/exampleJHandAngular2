@@ -1,0 +1,22 @@
+{
+    "anivipTestApp": {
+        "pass" : {
+            "home": {
+                "title": "Passes",
+                "createLabel": "Crear nuevo Pass",
+                "createOrEditLabel": "Crear o editar Pass"
+            },
+            "created": "Un nuevo Pass ha sido creado con el identificador {{ param }}",
+            "updated": "Un Pass ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Pass ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Pass {{ id }}?"
+            },
+            "detail": {
+                "title": "Pass"
+            },
+            "description": "Description",
+            "price": "Price"
+        }
+    }
+}
